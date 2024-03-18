@@ -44,6 +44,7 @@
     <ul>
       <li>Software Engineering Intern (Summer 2022)</li>
       <li>Software Engineering Intern (Spring 2024)</li>
+    </ul>
 
   </section>
 
@@ -58,16 +59,20 @@
 </section>
 
 <div style="display: flex; justify-content: center; padding: 20px;">
-  <button id="btnBackgroundColor">Change Background Color</button>
+  <div class="dropdown">
+    <button id="btnBackgroundColor">Change Background Color</button>
+    <div class="dropdown-content">
+      <a href="#" onclick="changeBackgroundColor('white')">White</a>
+      <a href="#" onclick="changeBackgroundColor('lightblue')">Light Blue</a>
+      <a href="#" onclick="changeBackgroundColor('lightgreen')">Light Green</a>
+      <a href="#" onclick="changeBackgroundColor('lightpink')">Light Pink</a>
+    </div>
+  </div>
 </div>
 <script>
-  document.getElementById('btnBackgroundColor').addEventListener('click', function () {
-    if (document.body.style.backgroundColor === 'lightblue') {
-      document.body.style.backgroundColor = 'white';
-      return;
+  function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
     }
-    document.body.style.backgroundColor = 'lightblue';
-  });
 </script>
 
 <footer>
